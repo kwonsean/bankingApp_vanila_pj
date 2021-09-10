@@ -1,0 +1,64 @@
+/* 전체 레이아웃 */
+.container{
+  width: 375px;
+  height: 812px;
+  margin: 20px auto;
+  background-color: beige;
+}
+.safe_area{
+  width: 375px;
+  height: 44px;
+  background-color: yellowgreen;
+}
+.app_screen{
+  width: 375px;
+  height: 710px;
+}
+.container > nav{
+  width: 375px;
+  height: 58px;
+  background-color: #00C7A3;
+}
+
+/* main 화면 (1페이지) */
+header{
+  background-color: red;
+  margin: 0 auto;
+  width: 314px;
+  height: 38px;
+}
+header > a{
+  float: left;
+}
+header > a > img{
+  display: block;
+  width: 38px;
+}
+header > h1{
+  float: left;
+  line-height: 38px;
+  margin-left: 94px;
+  margin-right: 71px;
+}
+
+header > ul{
+  float: left;
+  margin-top: 7px;
+}
+header > ul > li{
+  float: left;
+}
+header > ul > li:first-child{
+  margin-right: 13px;
+  margin-top: 3px;
+}
+header > ul > li >button{
+  border: none;
+  padding: 0;
+  background-color: unset; 
+}
+header > ul > li >button > img{
+  display: block;
+}
+
+
