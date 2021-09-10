@@ -19,8 +19,14 @@
   height: 58px;
   background-color: #00C7A3;
 }
-
+/* 공통요소 */
+button{
+  border: none;
+  padding: 0;
+  background-color: unset; 
+}
 /* main 화면 (1페이지) */
+/* header 시작 */
 header{
   background-color: red;
   margin: 0 auto;
@@ -40,7 +46,6 @@ header > h1{
   margin-left: 94px;
   margin-right: 71px;
 }
-
 header > ul{
   float: left;
   margin-top: 7px;
@@ -52,13 +57,82 @@ header > ul > li:first-child{
   margin-right: 13px;
   margin-top: 3px;
 }
-header > ul > li >button{
-  border: none;
-  padding: 0;
-  background-color: unset; 
-}
+
 header > ul > li >button > img{
   display: block;
 }
+/* header 끝 */
 
+/* bank_acct 시작 */
+.bank_acct{
+  background-color: #EEEBE5;
+  padding: 39px 51px 30px;
+}
 
+.bank_acct_info{
+  position: relative;
+  background-color: white;
+  padding-top: 14px;
+  width: 100%;
+  height: 155px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(173, 179, 93, 0.2);
+}
+.bank_acct_info > h3{
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+.bank_acct_info > div{
+  text-align: center;
+}
+
+.bank_acct_info > div.left_money{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 23px 0;
+
+}
+.bank_acct_info > div.transfer_btn {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+}
+.bank_acct_info > div.transfer_btn >button {
+  font-size: 12px;
+  font-weight: 600;
+}
+.bank_acct_info > div > div.range_wrap{
+  float: left;
+  padding-left: 32px;
+}
+.bank_acct_info > div > div.range_wrap >input{
+  width: 202px;
+  margin-bottom: 12px;
+  margin-right: 7px;
+}
+.bank_acct_info > div > button.chart{
+  float: left;
+}
+.bank_acct_info > div > div.left_message{
+  clear: both;
+}
+.bank_acct_info > div > div.left_message > span{
+  color: #888;
+  font-weight: 700;
+}
+/* bank_acct 끝 */
+
+/* 문구 */
+.notice{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 29px 0 25px;
+}
+.notice a{
+  color:black;
+  text-decoration: underline;
+}
+/* 문구 끝 */
