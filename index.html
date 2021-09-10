@@ -18,31 +18,31 @@
       <main>
         <!-- header -->
         <header>
-          <a><img src="./images/profile.png"></a>
+          <a href="#"><img src="./images/profile.png"></a>
           <h1>생활비</h1>
           <ul>
             <li aria-label="QR"><button><img src="./images/QR.svg"></button></li>
             <li aria-label="검색"><button><img src="./images/search.svg"></button></li>
           </ul>
         </header>
+
         <!-- bank_acct -->
         <section class="bank_acct">
           <div class="bank_acct_info">
-            <h3><span>355-68654654-51131</span></h3>
-            <div><span>1,240,000</span>원</div>
-            <div><button>이체</button></div>
+            <h3><span>355-673877-78773</span></h3>
+            <div class="left_money"><span>1,240,000원</span></div>
+            <div class="transfer_btn"><button>이체</button></div>
             <div>
-              <div>
+              <div class="range_wrap">
                 <input type="range">
               </div>
-              <button><img /></button>
-              <div><span>5일 동안 210,000원 남음</span></div>
-              <!-- js 구현 => (`${left_day}일남음 {left_won}원 남음`) -->
+              <button class="chart"><img src="./images/chart.svg" /></button>
+              <div class="left_message"><span>5일 동안 210,000원 남음</span></div>
             </div>
           </div>
         </section>
         <!-- 공지 -->
-        <div class="notice"><span>지금 낮은 이자로 생활대출을 신청하세요! </span><a>Go</a></div>
+        <div class="notice"><span>지금 낮은 이자로 생활대출을 신청하세요! </span><a href="#">Go</a></div>
         <section class="bank_use_history">
           <div class="drag_btn"></div>
           <!-- 저축 -->
