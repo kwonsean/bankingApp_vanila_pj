@@ -30,3 +30,5 @@ function fristSet(){
 fristSet();
 
 // range관련 끝
+
+//연결 확인
