@@ -2,13 +2,14 @@
 .container{
   width: 375px;
   height: 812px;
-  margin: 20px auto;
-  background-color: beige;
+  margin: 0px auto;
+  background-color: #EEEBE5;
 }
 .safe_area{
   width: 375px;
   height: 44px;
-  background-color: yellowgreen;
+  background-color: #EEEBE5;
+
 }
 .app_screen{
   width: 375px;
@@ -44,7 +45,6 @@ a{
 /* main 화면 (1페이지) */
 /* header 시작 */
 header{
-  background-color: red;
   margin: 0 auto;
   width: 314px;
   height: 38px;
@@ -127,7 +127,31 @@ header > ul > li >button > img{
   width: 202px;
   margin-bottom: 12px;
   margin-right: 7px;
+  /* 모양변경을 위해 참고한 코드  */
+  -webkit-appearance: none;
+  height: 6px;
+  background-color: #c4c4c4;
+  border-radius: 3px;
 }
+/* 컨트롤 버튼 설정 */
+.bank_acct_info > div > div.range_wrap >input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 4px; 
+  height: 17px;
+  background: #FF5F00;
+  border-radius: 2px; /* 컨트롤 버튼 선 둥글게 */
+  cursor: pointer; /* hover되었을때 커서 모양 */
+}
+.bank_acct_info > div > div.range_wrap >input::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 4px; 
+  height: 17px;
+  background: #FF5F00;
+  border-radius: 2px; /* 컨트롤 버튼 선 둥글게 */
+  cursor: pointer; /* hover되었을때 커서 모양 */
+}
+/* 컨트롤 버튼 설정 끝 */
+
 .bank_acct_info > div > button.chart{
   float: left;
 }
@@ -227,6 +251,7 @@ header > ul > li >button > img{
 .use_history_detail{
   margin: 0 37px;
 }
+
 .use_history_detail > ul > li{
   margin-bottom: 38px;
 }
