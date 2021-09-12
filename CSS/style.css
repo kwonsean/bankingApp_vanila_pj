@@ -19,6 +19,7 @@
   width: 375px;
   height: 58px;
   background-color: #00C7A3;
+  overflow: hidden;
 }
 /* 공통요소 */
 button{
@@ -265,3 +266,34 @@ header > ul > li >button > img{
   color:#FF5F00;
 }
 /* 상세내역 끝 */
+
+/* 하단메뉴 시작 */
+nav > ul{
+  height: 58px;
+  padding: 0 30px;
+}
+
+nav > ul::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+nav > ul > li{
+  float: left;
+}
+nav > ul > li > a{
+  display: block;
+  padding: 15px;
+}
+nav > ul > li:nth-child(2) > a{
+  padding-top: 16px;
+  padding-bottom: 17px;
+}
+nav > ul > li:nth-child(4) > a{
+   padding-top: 13px;
+   padding-bottom: 17px;
+}
+nav > ul > li ~li{
+  margin-left: 26px;
+}
+/* 하단메뉴 끝 */
