@@ -222,4 +222,46 @@ header > ul > li >button > img{
   margin: 0px 7px 0px 15px;
   vertical-align: -8px;
 }
-.bank_use_history > .use_history_detail{}
+/* bank_use_history안 상세 내역 부분 시작 */
+.use_history_detail{
+  margin: 0 37px;
+}
+.use_history_detail > ul > li{
+  margin-bottom: 38px;
+}
+.use_history_detail > ul > li > div{
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.use_history_detail > ul > li > div::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.use_history_detail > ul > li > div> span.total{
+  float: right;
+  color: #B4B4B4;
+  font-weight: 500;
+  font-size: 12px;
+}
+.use_history_detail > ul > li > ul > li{
+  padding-bottom: 11px;
+  border-bottom: 1px solid #B4B4B4;
+  font-size: 15px;
+}
+.use_history_detail > ul > li > ul > li::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.use_history_detail > ul > li > ul > li ~ li{
+  margin-top: 14px;
+}
+.use_history_detail > ul > li > ul > li > span.out, span.in{
+  float: right;
+}
+.use_history_detail > ul > li > ul > li > span.in{
+  color:#FF5F00;
+}
+/* 상세내역 끝 */
