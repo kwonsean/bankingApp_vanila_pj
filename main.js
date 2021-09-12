@@ -1,5 +1,5 @@
+// range관련 시작 
 // input 태그를 긁어 오기
-// const inputs = document.querySelectorAll('input[type="range"]')
 const inputs = document.querySelectorAll('input[type="range"]')
 const input = document.querySelector('.range_wrap > input')
 
@@ -23,8 +23,10 @@ inputs.forEach(input => input.addEventListener('mousemove', inputUpdate))
 // 모바일
 inputs.forEach(input => input.addEventListener('touchmove', inputUpdate))
 
-
+// range에 초기값 지정
 function fristSet(){
   input.style.background = `linear-gradient(to right, #FFDB4C 0%, #FFDB4C 50%, #C4C4C4 50%, #C4C4C4 100%)`
 }
 fristSet();
+
+// range관련 끝
