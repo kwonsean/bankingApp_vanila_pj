@@ -28,6 +28,7 @@ button{
   border: none;
   padding: 0;
   background-color: unset; 
+  cursor: pointer;
 }
 a{
   color: black;
@@ -297,12 +298,14 @@ header > ul > li >button > img{
 .scroll{
   height: 710px;
   overflow-y: scroll;
+  
 }
 #page2{
   background-color: rebeccapurple;
+  position: relative;
   height: 2000px;
 }
-#page2 > h1{
+#page2 > .top_title{
   position: sticky;
   top: 0px;
   box-sizing: border-box;
@@ -310,9 +313,17 @@ header > ul > li >button > img{
   height: 70px;
   padding-left: 31px;
   padding-top: 47px;
+  background-color: white;
+
+}
+#page2 >.top_title >h1{
   font-size: 20px;
   font-weight: 700;
-  background-color: white;
+}
+#page2 > .top_title> button{
+  position: absolute;
+  right: 15px;
+  top: 4px;
 }
 #page2 > .set_budget{}
 #page2 > .set_budget > h3{}
