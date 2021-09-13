@@ -31,4 +31,91 @@ fristSet();
 
 // range관련 끝
 
-//연결 확인
+
+// 막대그래프 시작
+const data = {
+  labels: [
+  '02',
+  '04',
+  '06',
+  '08',
+  '10',
+  '12',
+  '14',
+  '16',
+  '18',
+  '20',
+  '22',
+  '24',
+  '26',
+  '28',
+  '30',
+  ],
+  datasets: [{
+    type: 'bar',
+    label: 'Bar Dataset',
+    data: [70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000],
+    borderColor: 'rgb(255, 99, 132)',
+    backgroundColor:'rgba(8, 227, 11, 0.55)',
+    // '#38C976'
+    borderWidth: 0,
+    borderRadius: 10,
+  }, {
+    type: 'line',
+    label: 'Line Dataset',
+    borderDash: [5, 5],
+    data: [60000, 62000, 63000, 64000,60000, 62000, 63000, 64000,60000, 62000, 63000, 64000, 62000, 63000, 64000],
+    fill: false,
+    borderColor: '#FF5F00',
+  }]
+};
+const config = {
+  type: 'scatter',
+  data: data,
+  options: {
+    
+    radius: 0,
+    responsive:false,
+    scales:{
+      y:{
+        min:20000,
+        max:100000
+      }
+    },
+    ticks:{
+      font:{  size: 12,
+        lineHeight: 1.2, 
+      }
+    }
+  }
+};
+let myChart = new Chart(
+  document.querySelector('.bar_graph'),
+  config
+);
+
+
+// 도넛시작
+const data2 = {
+    datasets: [{
+    data: [11, 20, 20, 18, 21],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)',
+      'rgb(255, 205, 200)',
+      'rgb(100, 205, 86)',
+    ],
+    // hoverOffset: 4
+  }]
+};
+
+const config2 = {
+  type: 'doughnut',
+  data: data2,
+};
+
+let myChart2 = new Chart(
+  document.querySelector('.donut_graph'),
+  config2
+);
