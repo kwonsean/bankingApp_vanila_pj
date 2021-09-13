@@ -9,11 +9,12 @@
   width: 375px;
   height: 44px;
   background-color: #EEEBE5;
-
 }
 .app_screen{
   width: 375px;
   height: 710px;
+  /* height: 2000px; */
+  background-color: aliceblue;
   overflow: hidden;
 }
 .container > nav{
@@ -291,6 +292,31 @@ header > ul > li >button > img{
   color:#FF5F00;
 }
 /* 상세내역 끝 */
+
+/* 지출관리 페이지 시작 (page2)*/
+.scroll{
+  height: 710px;
+  overflow-y: scroll;
+}
+#page2{
+  background-color: rebeccapurple;
+  height: 2000px;
+}
+#page2 > h1{
+  position: sticky;
+  top: 0px;
+  box-sizing: border-box;
+  width: 375px;
+  height: 70px;
+  padding-left: 31px;
+  padding-top: 47px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: white;
+}
+#page2 > .set_budget{}
+#page2 > .set_budget > h3{}
+#page2 > .set_budget > span{}
 
 /* 하단메뉴 시작 */
 nav > ul{
