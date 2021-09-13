@@ -16,7 +16,7 @@
     <div class="safe_area"></div>
     <div class="app_screen">
       <!-- main 화면 -->
-      <main>
+      <main style="display: none;">
         <!-- header -->
         <header>
           <a href="#"><img src="./images/profile.png" alt="profile"></a>
@@ -115,36 +115,38 @@
         </section>
       </main>
       <!-- 지출관리 설정 page -->
-      <div style="display: none;">
-        <h1>지출관리</h1>
-        <section class="set_budget">
-          <h3>기준금액설정</h3>
-          <span>2,100,000원</span>
-          <div>
-            <input type="range">
-          </div>
-        </section>
-        <section class="daily_report">
-          <h3>일간 리포트</h3>
-          <canvas class="bar_graph"></canvas>
-        </section>
-        <section class="monthly_out_pattern">
-          <h3>6월 지출패턴</h3>
-          <div class="donut_graph">
-            <canvas></canvas>
-            <div><span>1,736,500</span><span>원</span></div>
-          </div>
-          <ul class="out_category">
-            <li><img /><span class="left">주유비</span><span class="right">50,000원</span></li>
-            <li><img /><span class="left">건강관리비</span><span class="right">80,000원</span></li>
-            <li><img /><span class="left">외식비</span><span class="right">233,000원</span></li>
-            <li><img /><span class="left">장보기</span><span class="right">390,000원</span></li>
-            <li><img /><span class="left">상점</span><span class="right">46,000원</span></li>
-          </ul>
-        </section>
-        <button>닫기</button>
+      <div class="scroll">
+        <div id="page2">
+          <h1>지출관리</h1>
+          <section class="set_budget">
+            <h3>기준금액설정</h3>
+            <span>2,100,000원</span>
+            <div class="range_wrap">
+              <input type="range">
+            </div>
+          </section>
+          <section class="daily_report">
+            <h3>일간 리포트</h3>
+            <canvas class="bar_graph"></canvas>
+          </section>
+          <section class="monthly_out_pattern">
+            <h3>6월 지출패턴</h3>
+            <div class="donut_graph">
+              <canvas></canvas>
+              <div><span>1,736,500</span><span>원</span></div>
+            </div>
+            <ul class="out_category">
+              <li><img /><span class="left">주유비</span><span class="right">50,000원</span></li>
+              <li><img /><span class="left">건강관리비</span><span class="right">80,000원</span></li>
+              <li><img /><span class="left">외식비</span><span class="right">233,000원</span></li>
+              <li><img /><span class="left">장보기</span><span class="right">390,000원</span></li>
+              <li><img /><span class="left">상점</span><span class="right">46,000원</span></li>
+            </ul>
+          </section>
+          <button>닫기</button>
+        </div>
+            </div>
       </div>
-    </div>
     <!-- 하단 메뉴 -->
     <nav>
       <ul>
