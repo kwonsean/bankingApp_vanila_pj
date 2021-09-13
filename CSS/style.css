@@ -257,7 +257,9 @@ header > ul > li >button > img{
 }
 /* bank_use_history안 상세 내역 부분 시작 */
 .use_history_detail{
+  overflow-y:scroll;
   margin: 0 37px;
+  height: 294px;
 }
 
 .use_history_detail > ul > li{
