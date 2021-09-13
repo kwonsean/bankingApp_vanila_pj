@@ -14,7 +14,7 @@
   width: 375px;
   height: 710px;
   /* height: 2000px; */
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   overflow: hidden;
 }
 .container > nav{
@@ -35,6 +35,40 @@ a{
   text-decoration:none;
 }
 
+input.range{
+  -webkit-appearance: none;
+  width: 202px;
+  margin-bottom: 12px;
+  margin-right: 7px;
+  height: 6px;
+  background-color: #c4c4c4;
+  border-radius: 3px;
+}
+/* 컨트롤 버튼 설정 */
+input.range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 4px; 
+  height: 17px;
+  background: #FF5F00;
+  border-radius: 2px; /* 컨트롤 버튼 선 둥글게 */
+  cursor: pointer; /* hover되었을때 커서 모양 */
+}
+input.range::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 4px; 
+  height: 17px;
+  background: #FF5F00;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input.range:last-child::-webkit-slider-thumb{
+  width: 8px; 
+  height: 28px;
+}
+input.range:last-child::-moz-range-thumb{
+  width: 8px; 
+  height: 28px;
+}
 /* 색상 */
 .red{background-color: red;}
 .orange{background-color: #FF5F00;}
@@ -125,34 +159,6 @@ header > ul > li >button > img{
   float: left;
   padding-left: 32px;
 }
-.bank_acct_info > div > div.range_wrap >input{
-  width: 202px;
-  margin-bottom: 12px;
-  margin-right: 7px;
-  /* 모양변경을 위해 참고한 코드  */
-  -webkit-appearance: none;
-  height: 6px;
-  background-color: #c4c4c4;
-  border-radius: 3px;
-}
-/* 컨트롤 버튼 설정 */
-.bank_acct_info > div > div.range_wrap >input::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  width: 4px; 
-  height: 17px;
-  background: #FF5F00;
-  border-radius: 2px; /* 컨트롤 버튼 선 둥글게 */
-  cursor: pointer; /* hover되었을때 커서 모양 */
-}
-.bank_acct_info > div > div.range_wrap >input::-moz-range-thumb{
-  -webkit-appearance: none;
-  width: 4px; 
-  height: 17px;
-  background: #FF5F00;
-  border-radius: 2px; /* 컨트롤 버튼 선 둥글게 */
-  cursor: pointer; /* hover되었을때 커서 모양 */
-}
-/* 컨트롤 버튼 설정 끝 */
 
 .bank_acct_info > div > button.chart{
   float: left;
@@ -298,16 +304,16 @@ header > ul > li >button > img{
 .scroll{
   height: 710px;
   overflow-y: scroll;
-  
+  background-color: white;
 }
 #page2{
-  background-color: rebeccapurple;
   position: relative;
-  height: 2000px;
+  /* height: 2000px; */
 }
 #page2 > .top_title{
   position: sticky;
   top: 0px;
+  z-index: 1;
   box-sizing: border-box;
   width: 375px;
   height: 70px;
@@ -325,9 +331,102 @@ header > ul > li >button > img{
   right: 15px;
   top: 4px;
 }
-#page2 > .set_budget{}
-#page2 > .set_budget > h3{}
-#page2 > .set_budget > span{}
+#page2 > .sections_wrap{
+  background-color: white;
+  margin: 18px 32px 31px;
+}
+#page2 > .sections_wrap > .set_budget{
+  padding-top: 10px;
+  margin-bottom: 65px;
+}
+/* 소제목들 공통 */
+#page2 > .sections_wrap h3{
+  color: #777;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+#page2 > .sections_wrap > .set_budget >h3{
+  float: left;
+  margin-bottom: 26px;
+  padding-top:4px;
+}
+#page2 > .sections_wrap > .set_budget >span{
+  float: right;
+  font-size: 20px;
+  color:#FF5F00;
+}
+#page2 > .sections_wrap > .set_budget > div.range_wrap{
+  clear: both;
+}
+#page2 > .sections_wrap > .set_budget > div.range_wrap > input.range{
+  width: 96%;
+  margin: 0 2%;
+  height: 9px;
+}
+#page2 > .sections_wrap > .daily_report {
+  overflow-x: scroll;
+  margin-bottom: 52px;
+}
+#page2 > .sections_wrap > .daily_report > canvas.bar_graph{
+  width: 462px;
+}
+#page2 .monthly_out_pattern > .donut_graph_wrap{
+  position: relative;
+}
+#page2 .monthly_out_pattern > .donut_graph_wrap >canvas.dount_graph{}
+#page2 .monthly_out_pattern > .donut_graph_wrap >.total_wrap{
+  position: absolute;
+  top: 48%;
+  left: 34%;
+}
+#page2 .monthly_out_pattern > .donut_graph_wrap >.total_wrap > span:nth-child(1){
+  font-size: 20px;
+  font-weight: 700;
+}
+#page2 .monthly_out_pattern > .donut_graph_wrap >.total_wrap > span:nth-child(2){
+  font-size: 12px;
+}
+#page2  ul.out_category{
+  margin-top: 14px;
+  padding: 6px 0px 8px;
+}
+#page2  ul.out_category >li{
+  height: 24px;
+  line-height: 24px;
+}
+#page2  ul.out_category >li::after{
+  display: block;
+  clear: both;
+  content: '';
+}
+#page2  ul.out_category >li + li{
+  margin-top: 28px;
+}
+#page2  ul.out_category >li >img{
+  float: left;
+}
+#page2  ul.out_category >li:nth-child(1) >img{
+  margin-right: 1px;
+}
+#page2  ul.out_category >li:nth-child(3) >img{
+  margin-right: 10px;
+}
+#page2  ul.out_category >li:nth-child(4) >img{
+  margin-right: 3px;
+}
+#page2  ul.out_category >li:nth-child(5) >img{
+  margin-right: 5px;
+}
+
+#page2  ul.out_category >li >span.left{
+  float: left;
+  margin-left: 19px;
+}
+#page2  ul.out_category >li >span.right{
+  float: right;
+  color: #999;
+}
+
 
 /* 하단메뉴 시작 */
 nav > ul{
