@@ -32,6 +32,37 @@ fristSet();
 // range관련 끝
 
 
+// 상세내역 확장 
+const dragBtn = document.querySelector('.drag_btn');
+const history = document.querySelector('.bank_use_history');
+const detail = document.querySelector('.use_history_detail');
+
+// drag 시도했는데 쉽지 않네..
+// function updateDrag(){
+//   console.log('it\'s drag!')
+// }
+// function dragOn(){
+//   console.log(dragBtn.style.color)
+// }
+// dragBtn.addEventListener('dragstart', updateDrag);
+// dragBtn.addEventListener('drag', dragOn);
+
+function clicked(){
+  history.classList.toggle('long')
+  
+  if(detail.classList.contains('long')){
+    setTimeout( function(){
+      detail.classList.remove('long')
+      },1000);  
+  } else{
+    detail.classList.add('long')
+  }
+  
+}
+dragBtn.addEventListener('click', clicked);
+// 상세내역 확장 일단은 버튼으로 끝
+
+
 // 막대그래프 시작
 const data = {
   labels: [
