@@ -206,6 +206,7 @@ header > ul > li >button > img{
   width: 48px;
   height: 2px;
   border-radius:50px;
+  cursor: pointer;
   background: #777;
 }
 .bank_use_history > .saving{
