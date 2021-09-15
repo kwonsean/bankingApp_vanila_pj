@@ -199,11 +199,8 @@ const data = {
     type: 'bar',
     label: 'Bar Dataset',
     data: [70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000],
-    borderColor: 'rgb(255, 99, 132)',
-    barThickness: 3,
-    backgroundColor:'rgba(8, 227, 11, 0.55)',
-    // '#38C976'
-    borderWidth: 0,
+    barThickness: 5,
+    backgroundColor:'rgba(56, 201, 118, 0.9)',
     borderRadius: 10,
   }, {
     type: 'line',
@@ -218,14 +215,37 @@ const config = {
   type: 'scatter',
   data: data,
   options: {
-    
+    plugins: {
+      legend: {
+        display: false,
+      }
+    },
     radius: 0,
     responsive:false,
     scales:{
       y:{
+        grid: {
+          borderDash: [8, 4],
+          color: '#ECF0F4',
+          drawBorder: false
+        },
         min:20000,
-        max:100000
-      }
+        max:100000,
+        ticks: {
+          stepSize: 20000
+        }
+      },
+       x: {
+        grid: {
+          display: false,
+        },
+        min: 2,
+        max: 30,
+        ticks: {
+          stepSize: 2
+        }
+      },
+      
     },
     ticks:{
       font:{  size: 12,
@@ -242,22 +262,42 @@ let myChart = new Chart(
 
 // 도넛시작
 const data2 = {
-    datasets: [{
-    data: [11, 20, 20, 18, 21],
-    backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)',
-      'rgb(255, 205, 200)',
-      'rgb(100, 205, 86)',
+  labels: [
+    '주유비',
+    '건강관리비',
+    '외식비',
+    '장보기',
+    '상점',
+    
     ],
-    // hoverOffset: 4
+    datasets: [{
+    data: [50000, 80000, 233000, 390000, 46000],
+    backgroundColor: [
+      'RGB(219, 48, 105)',
+      'RGB(245, 143, 41)',
+      'RGB(255, 75, 62) ',
+      'RGB(35, 87, 137)',
+      'RGB(155, 197, 61)',
+     
+    ],
+    hoverOffset: 1,
+    borderWidth:0
   }]
 };
 
 const config2 = {
   type: 'doughnut',
   data: data2,
+  options: {
+    maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        }
+      },
+      // 도넛 굵기 조절 
+      cutout: '77%',
+  },
 };
 
 let myChart2 = new Chart(
