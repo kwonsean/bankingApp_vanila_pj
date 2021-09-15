@@ -47,6 +47,8 @@ input.range{
 /* 컨트롤 버튼 설정 */
 input.range::-webkit-slider-thumb{
   -webkit-appearance: none;
+  position: relative;
+  left: 0;
   width: 4px; 
   height: 17px;
   background: #FF5F00;
@@ -68,6 +70,14 @@ input.range::-moz-range-thumb{
 .set_budget input.range::-moz-range-thumb{
   width: 8px; 
   height: 28px;
+}
+/* page1 컨트롤버튼 방어  */
+.shield{
+  position: absolute;
+  width: 205px;
+  height: 20px;
+  background-color: rgba(1, 1, 1, 0);
+  z-index: 10;
 }
 /* 색상 */
 .red{background-color: red;}
