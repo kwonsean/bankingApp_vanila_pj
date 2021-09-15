@@ -388,7 +388,7 @@ transition: 1s;
 #page2 > .top_title> button{
   position: absolute;
   right: 15px;
-  top: 4px;
+  top: 14px;
 }
 #page2 > .sections_wrap{
   background-color: white;
