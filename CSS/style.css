@@ -453,13 +453,16 @@ transition: 1s;
   margin-right: 1px;
 }
 #page2  ul.out_category >li:nth-child(3) >img{
-  margin-right: 10px;
+  margin-right: 8px;
+  margin-left: 2px;
 }
 #page2  ul.out_category >li:nth-child(4) >img{
   margin-right: 3px;
 }
 #page2  ul.out_category >li:nth-child(5) >img{
-  margin-right: 5px;
+  margin-right: 4px;
+  margin-left: 1px;
+
 }
 
 #page2  ul.out_category >li >span.left{
