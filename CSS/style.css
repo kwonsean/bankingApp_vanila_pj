@@ -302,6 +302,8 @@ header > ul > li >button > img{
   font-size: 13px;
   font-weight: 700;
 }
+
+
 .use_history_detail > ul > li > div::after{
   display: block;
   content: '';
@@ -323,6 +325,8 @@ header > ul > li >button > img{
   content: '';
   clear: both;
 }
+.innerUl{margin-bottom: 38px;}
+.innerUl:last-child{margin-bottom: 10px;}
 .use_history_detail > ul > li > ul > li ~ li{
   margin-top: 14px;
 }
