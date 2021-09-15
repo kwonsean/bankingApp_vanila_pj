@@ -64,6 +64,102 @@ function clicked(){
 dragBtn.addEventListener('click', clicked);
 // 상세내역 확장 일단은 버튼으로 끝
 
+// JSON으로 자료 가져오기 use_history_detail부분 
+let today = new Date();
+let todayDate = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2,'0')}-${today.getDate().toString().padStart(2,'0')}`
+// console.log(todayDate) 
+let list = [];
+let day = Number(todayDate.slice(-2))
+
+const url = 'https://syoon0624.github.io/json/test.json';
+const reqObj = new XMLHttpRequest();
+reqObj.open('GET', url);
+reqObj.responseType = 'json';
+reqObj.send();
+reqObj.addEventListener('load', work);
+
+function work() {
+  const tabData = reqObj.response.bankList;
+  for(let i=0; i<tabData.length; i++){
+    if (day <Number(tabData[i].date.slice(-2))) {
+      break
+    }
+    list.push(tabData[i])
+  }
+  // console.log(list)
+  listPop(list)
+}
+
+function  listPop(list){
+  let listLength = list.length;
+  let dayList = [];
+  for(let i=listLength-1; i >= 0; i--){
+    if (day === Number(list[i].date.slice(-2))){
+      dayList.push(list[i])  
+      if(day === 1 && i === 0) creatDay(dayList)
+    // console.log(list[i].date)
+    } else{
+      creatDay(dayList)
+      dayList =[];
+      day--;
+      i+=1;
+      // console.log('-----------')
+    }
+  }
+}
+function creatDay(dayList){
+  if(dayList.length === 0) return false;
+
+  // console.log(dayList)
+  let total = 0;
+  const detailList = document.querySelector('.detail_list')
+  const detailList_li = document.querySelector('.detail_list > li')
+  const divElem = document.createElement('div')
+  const spanDay = document.createElement('span')
+  const spanTotal = document.createElement('span')
+  const innerUl =document.createElement('ul')
+  innerUl.classList.add('innerUl')
+  spanDay.classList.add('day')
+  // 오늘만 오늘로 표시 이후는 날짜로.. 너무 복잡합니다.  ++ 년도는 안보이게 
+  if(dayList[0].date === todayDate)  spanDay.innerText = '오늘'
+  else spanDay.innerText = dayList[0].date.slice(-5)
+
+  divElem.appendChild(spanDay)
+  detailList_li.appendChild(divElem)
+  detailList.appendChild(detailList_li)
+
+  for(let i =0; i<dayList.length; i++){
+    const spanList = document.createElement('span')
+    const innerUl_li =document.createElement('li')
+    spanList.classList.add('list');
+    spanList.innerText = dayList[i].history;
+    innerUl_li.appendChild(spanList);
+    if (dayList[i].income === 'out'){
+      const spanOut = document.createElement('span')
+      spanOut.classList.add('out')
+      spanOut.innerText = (dayList[i].price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      innerUl_li.appendChild(spanOut)
+      innerUl.appendChild(innerUl_li)
+      total += Number(dayList[i].price)
+    } else {
+      const spanIn = document.createElement('span')
+      spanIn.classList.add('in')
+      spanIn.innerText = '+' + (dayList[i].price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      innerUl_li.appendChild(spanIn);
+      innerUl.appendChild(innerUl_li)
+    }
+    detailList_li.appendChild(innerUl)
+    detailList.appendChild(detailList_li)
+  }
+  spanTotal.classList.add('total')
+  total = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  spanTotal.innerText = `${total}원 지출`
+  divElem.appendChild(spanTotal)
+}
+
+
+
+
 // 2페이지 나타내기
 const chartBtn = document.querySelector('.chart')
 const closeBtn = document.querySelector('.close_btn')
@@ -104,6 +200,7 @@ const data = {
     label: 'Bar Dataset',
     data: [70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000, 70000, 90000, 60000, 85000, 68000],
     borderColor: 'rgb(255, 99, 132)',
+    barThickness: 3,
     backgroundColor:'rgba(8, 227, 11, 0.55)',
     // '#38C976'
     borderWidth: 0,
