@@ -33,6 +33,23 @@ inputPage2.addEventListener('touchmove', inputUpdate);
 
 // range관련 끝
 
+// saving 부분 wheel을 이용하여 가로로 움직이게 하기
+const horizontal = document.querySelector('.saving')
+  horizontal.addEventListener('wheel', e => { // 휠 이벤트 감시
+    e.preventDefault(); // 휠 기본 이벤트 제거
+    // console.log(e.wheelDelta)  위로 휠하면 120출력 아래로휠하면 -120출력
+    if(e.wheelDelta > 0){
+      // 휠 델타 값이 양수 이면 [scroll up -> move left] 를 의미합니다
+      horizontal.scrollLeft -= 20; //움직일 거리를 조절합니다
+    }else{
+      // scroll down -> move right // 반대의 경우
+      horizontal.scrollLeft += 20;
+    }
+  })
+
+  
+
+
 
 // 상세내역 확장 
 const dragBtn = document.querySelector('.drag_btn');
