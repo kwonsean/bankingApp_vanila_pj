@@ -62,7 +62,19 @@ function clicked(){
 dragBtn.addEventListener('click', clicked);
 // 상세내역 확장 일단은 버튼으로 끝
 
+// 2페이지 나타내기
+const chartBtn = document.querySelector('.chart')
+const closeBtn = document.querySelector('.close_btn')
+const page2 = document.querySelector('.scroll')
 
+function clickChartBtn(){
+  page2.classList.add('focus')
+}
+function clickCloseBtn(){
+  page2.classList.remove('focus')
+}
+chartBtn.addEventListener('click', clickChartBtn)
+closeBtn.addEventListener('click', clickCloseBtn)
 // 막대그래프 시작
 const data = {
   labels: [
