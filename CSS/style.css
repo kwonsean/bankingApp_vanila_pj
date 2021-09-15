@@ -329,6 +329,12 @@ header > ul > li >button > img{
   height: 710px;
   overflow-y: scroll;
   background-color: white;
+  transition: 2s;
+
+}
+.scroll.focus{
+transform: translateY(-1332px);
+transition: 1s;
 }
 #page2{
   position: relative;
