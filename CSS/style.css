@@ -225,9 +225,9 @@ header > ul > li >button > img{
   overflow-x: scroll;
   margin: 0 30px 17px 37px;
 }
-/* .bank_use_history > .saving::-webkit-scrollbar{
+.bank_use_history > .saving::-webkit-scrollbar{
   display: none;
-} */
+}
 .bank_use_history > .saving >ul{
   height: 100%;
   width: 550px;
