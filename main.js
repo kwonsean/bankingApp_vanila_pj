@@ -13,7 +13,9 @@ function inputUpdate () {
   // 넘어오는 이벤트 주체의 값 (range의 경우이므로 0~100(%) 중 하나의 값)
   const perVal = this.value
   setData(this.value)
- 
+  // 이걸하면 해결.. setDate는 필요없다. 
+  // inputPage1.value = perVal
+
   // slider-thumb(컨트롤 하는 버튼)의 값을 기준으로 전후 그라디언트
   // input의 배경색을 그라디언트로 해서 버튼을 기준으로 오른쪽은 색 왼쪽은 색 X 
   this.style.background = `linear-gradient(to right, #FFDB4C 0%, #FFDB4C ${perVal}%, #C4C4C4 ${perVal}%, #C4C4C4 100%)`
