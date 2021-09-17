@@ -91,9 +91,6 @@ input.range::-moz-range-thumb{
 
 /* main 화면 (1페이지) */
 /* header 시작 */
-main{
-  /* position: relative; */
-}
 header{
   margin: 0 auto;
   min-width: 315px;
@@ -135,7 +132,6 @@ header > ul > li >button > img{
   background-color: #EEEBE5;
   padding: 39px 51px 30px;
 }
-
 .bank_acct_info{
   position: relative;
   background-color: white;
@@ -156,12 +152,10 @@ header > ul > li >button > img{
 .bank_acct_info > div{
   text-align: center;
 }
-
 .bank_acct_info > div.left_money{
   font-size: 25px;
   font-weight: 700;
   margin: 23px 0;
-
 }
 .bank_acct_info > div.transfer_btn {
   position: absolute;
@@ -216,7 +210,6 @@ header > ul > li >button > img{
   border-radius: 30px 30px 0px 0px;
   position: relative;
   transition: 1s;
-
 }
 .bank_use_history.long{
   transform: translateY(-280px);
@@ -277,7 +270,6 @@ header > ul > li >button > img{
   height: 100%;
   width: 70%;
 }
-
 .bank_use_history > .saving >ul> li:last-child{
   background-color:unset;
   line-height: 47px;
@@ -303,21 +295,17 @@ header > ul > li >button > img{
 .use_history_detail.long{
   height: 574px;
 }
-
 .use_history_detail > ul > li{
   margin-bottom: 38px;
 }
 .use_history_detail > ul > li:last-child{
   margin-bottom: 1px;
-
 }
 .use_history_detail > ul > li > div{
   margin-bottom: 18px;
   font-size: 13px;
   font-weight: 700;
 }
-
-
 .use_history_detail > ul > li > div::after{
   display: block;
   content: '';
@@ -358,7 +346,9 @@ header > ul > li >button > img{
   overflow-y: scroll;
   background-color: white;
   transition: 2s;
-
+}
+.scroll::-webkit-scrollbar{
+  display: none;
 }
 .scroll.focus{
 transform: translateY(-1335px);
@@ -366,7 +356,6 @@ transition: 1s;
 }
 #page2{
   position: relative;
-  /* height: 2000px; */
 }
 #page2 > .top_title{
   position: sticky;
@@ -379,7 +368,6 @@ transition: 1s;
   padding-left: 31px;
   padding-top: 47px;
   background-color: white;
-
 }
 #page2 >.top_title >h1{
   font-size: 20px;
@@ -398,6 +386,7 @@ transition: 1s;
   padding-top: 10px;
   margin-bottom: 65px;
 }
+
 /* 소제목들 공통 */
 #page2 > .sections_wrap h3{
   color: #777;
@@ -482,9 +471,7 @@ transition: 1s;
 #page2  ul.out_category >li:nth-child(5) >img{
   margin-right: 4px;
   margin-left: 1px;
-
 }
-
 #page2  ul.out_category >li >span.left{
   float: left;
   margin-left: 19px;
@@ -501,7 +488,6 @@ nav > ul{
   padding: 0 30px;
   min-width: 375px;
 }
-
 nav > ul::after{
   display: block;
   content: '';
@@ -510,7 +496,6 @@ nav > ul::after{
 nav > ul > li{
   float: left;
 }
-
 nav > ul > li > a{
   display: block;
   padding: 15px;
@@ -532,16 +517,11 @@ nav > ul > li ~ li{
 
 /* 도저히 자리가 잡히지 않는 부분 @media 이용 */
 /* 아이폰 X 와 아이패드 pro를 기준으로 */
-@media screen and (max-width:375px) {
-  
-}
-
 @media screen and (min-width:1024px) {
   #page2 .monthly_out_pattern > .donut_graph_wrap >.total_wrap{
     position: absolute;
     top: 48%;
     left: 33%;
-    
   }
   #page2 .monthly_out_pattern > .donut_graph_wrap >.total_wrap > span:nth-child(1){
     font-size: 30px;
