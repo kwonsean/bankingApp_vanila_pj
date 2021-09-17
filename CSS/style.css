@@ -342,7 +342,7 @@ header > ul > li >button > img{
 
 /* 지출관리 페이지 시작 (page2)*/
 .scroll{
-  height: 710px;
+  height: 715px;
   overflow-y: scroll;
   background-color: white;
   transition: 2s;
